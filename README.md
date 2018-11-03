@@ -17,3 +17,21 @@ const Demo = () => {
   );
 };
 ```
+
+Or, prepare hook once.
+
+```js
+const useMedia = createUseMedia({
+  minWidth: 1000,
+});
+
+const Demo = () => {
+  const isWide = useMedia();
+
+  return (
+    <div>
+      Screen is wide: {isWide ? '😃' : '😢'}
+    </div>
+  );
+};
+```
